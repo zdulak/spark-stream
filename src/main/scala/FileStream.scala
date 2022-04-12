@@ -7,7 +7,7 @@ object FileStream  extends App {
     .getOrCreate()
 
   val path = if (args.length > 0) args(0) else "data"
-  
+
   import org.apache.spark.sql.types._
   val schema = StructType(
     StructField("id", LongType, nullable = false) ::
